@@ -1,31 +1,51 @@
 class DocsController < ApplicationController
 
-	def index
-	end
+  before_action :find_doc, only: [:show, :edit, :update, :destroy]
 
-	def show
-	end
+  def index
+    @docs = Doc.all.order("created_at DESC")
+  end
 
-	def edit
-	end
+  def show
+  end
 
-	def update
-	end
+  def edit
+  end
 
-	def destroy
-	end
+  def update
+    if @doc.update(doc_params)
+      redirect_to @doc
+    else
+      render 'edit'
+    end
+  end
 
-	def create
-	end
+  def destroy
+    @doc.destroy
+    redirect_to docs_path
+  end
 
-	def new
-	end
+  def create
+    @doc = Doc.new(doc_params)
 
-	private
+    if @doc.save
+        redirect_to @doc
+    else
+      render "new"
+    end
+  end
 
-	def find_doc
-	end
+  def new
+    @doc = Doc.new 
+  end
 
-	def doc_params
-	end
+  private
+
+    def find_doc
+        @doc = Doc.find(params[:id])
+    end
+
+    def doc_params
+        params.require(:doc).permit(:title, :content)
+    end
 end
