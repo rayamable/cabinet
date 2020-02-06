@@ -1,7 +1,3 @@
-$dark_gray: #2B2E2E;
-$light_gray: #C0C1C1;
-$green: #529ECC;
-
 @mixin bold_font {
   font-family: 'Dosis', sans-serif;
     font-weight: bold;
@@ -43,7 +39,7 @@ body {
 button, .button {
     border: none;
     outline: none;
-    background: $green;
+    background: #529ECC;
     padding: 1rem 3.5rem;
     border-radius: 0.1rem;
     a {
@@ -59,10 +55,10 @@ button, .button {
 }
 
 a {
-    color: $green;
+    color: #529ECC;
     text-decoration: none;
     &:hover {
-        color: $dark_gray;
+        color: #2B2E2E;
     }
 }
 
@@ -96,7 +92,7 @@ header {
                 line-height: 1.5;
                 margin-left: 1rem;
                 &:hover {
-                    color: $light_gray;
+                    color: #C0C1C1;
                 }
             }
         }
@@ -121,7 +117,7 @@ footer {
 input[type="text"], input[type="email"], input[type="password"], textarea {
     width: 100%;
     margin-bottom: 1rem;
-    border: 1px solid $light_gray;
+    border: 1px solid #C0C1C1;
     border-radius: .4rem;
 }
 
