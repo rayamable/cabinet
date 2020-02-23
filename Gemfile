@@ -17,10 +17,11 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-gem 'devise', '~> 4.7'
-gem 'simple_form', '~> 5.0'
-gem 'haml', '~> 5.1'
+gem 'devise'
+gem 'simple_form'
+gem 'haml'
 gem 'social-share-button'
+gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 
 
 # Use Redis adapter to run Action Cable in production
